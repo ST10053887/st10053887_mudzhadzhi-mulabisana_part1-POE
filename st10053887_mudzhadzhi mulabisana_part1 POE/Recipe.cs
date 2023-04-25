@@ -22,6 +22,10 @@ namespace st10053887_mudzhadzhi_mulabisana_part1_POE
             ingredients[index] = new Ingredient { Name = name, Quantity = quantity, Unit = unit };
         }
 
+        public void SetStep(int index, string description)
+        {
+            steps[index] = new Step { Description = description };
+        }
 
     }
 }
