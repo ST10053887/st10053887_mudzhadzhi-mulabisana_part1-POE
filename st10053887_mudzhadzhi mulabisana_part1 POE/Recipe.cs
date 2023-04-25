@@ -10,5 +10,11 @@ namespace st10053887_mudzhadzhi_mulabisana_part1_POE
     {
         private Ingredient[] ingredients;
         private Step[] steps;
+
+        public Recipe(int numIngredients, int numSteps)
+        {
+            ingredients = new Ingredient[numIngredients];
+            steps = new Step[numSteps];
+        }
     }
 }
