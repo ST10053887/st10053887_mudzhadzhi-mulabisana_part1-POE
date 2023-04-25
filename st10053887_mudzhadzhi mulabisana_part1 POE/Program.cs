@@ -33,6 +33,17 @@ namespace st10053887_mudzhadzhi_mulabisana_part1_POE
 
                 recipe.SetIngredient(i, name, quantity, unit);
             }
+
+            for (int i = 0; i < numSteps; i++)
+            {
+                 Console.Write("Step {0}: ", i + 1);
+                 string description = Console.ReadLine();
+
+                 recipe.SetStep(i, description);
+            }
+
+                recipe.PrintRecipe();
+            
         }
     }
 }
