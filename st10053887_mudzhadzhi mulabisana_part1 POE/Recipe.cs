@@ -26,6 +26,42 @@ namespace st10053887_mudzhadzhi_mulabisana_part1_POE
         {
             steps[index] = new Step { Description = description };
         }
+        public void PrintRecipe()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine("Ingredients:");
+            foreach (var ingredient in ingredients)
+            {
+                Console.WriteLine("{0} {1} {2}", ingredient.Quantity, ingredient.Unit, ingredient.Name);
+            }
 
+            Console.WriteLine("Steps:");
+            for (int i = 0; i < steps.Length; i++)
+            {
+                Console.WriteLine("{0}. {1}", i + 1, steps[i].Description);
+            }
+        }
+
+        public void ScaleRecipe(decimal factor)
+        {
+            foreach (var ingredient in ingredients)
+            {
+                ingredient.Quantity *= factor;
+            }
+        }
+
+        public void ResetQuantities()
+        {
+            foreach (var ingredient in ingredients)
+            {
+                ingredient.Quantity /= 2;
+            }
+        }
+
+        public void ClearRecipe()
+        {
+            Array.Clear(ingredients, 0, ingredients.Length);
+            Array.Clear(steps, 0, steps.Length);
+        }
     }
 }
