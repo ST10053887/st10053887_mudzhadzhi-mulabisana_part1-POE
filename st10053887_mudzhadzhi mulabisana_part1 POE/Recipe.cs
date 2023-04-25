@@ -16,5 +16,12 @@ namespace st10053887_mudzhadzhi_mulabisana_part1_POE
             ingredients = new Ingredient[numIngredients];
             steps = new Step[numSteps];
         }
+
+        public void SetIngredient(int index, string name, decimal quantity, string unit)
+        {
+            ingredients[index] = new Ingredient { Name = name, Quantity = quantity, Unit = unit };
+        }
+
+
     }
 }
