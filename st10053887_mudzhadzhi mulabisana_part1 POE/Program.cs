@@ -19,6 +19,20 @@ namespace st10053887_mudzhadzhi_mulabisana_part1_POE
             int numSteps = int.Parse(Console.ReadLine());
 
             Recipe recipe = new Recipe(numIngredients, numSteps);
+
+            for (int i = 0; i < numIngredients; i++)
+            {
+                Console.Write("Ingredient {0} name: ", i + 1);
+                string name = Console.ReadLine();
+
+                Console.Write("Ingredient {0} quantity: ", i + 1);
+                decimal quantity = decimal.Parse(Console.ReadLine());
+
+                Console.Write("Ingredient {0} unit: ", i + 1);
+                string unit = Console.ReadLine();
+
+                recipe.SetIngredient(i, name, quantity, unit);
+            }
         }
     }
 }
