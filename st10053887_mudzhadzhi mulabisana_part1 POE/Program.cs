@@ -43,7 +43,32 @@ namespace st10053887_mudzhadzhi_mulabisana_part1_POE
             }
 
                 recipe.PrintRecipe();
-            
-        }
+
+            while (true)
+            {
+                Console.Write("Enter scaling factor (0.5, 2, or 3), reset, or clear: ");
+                string input = Console.ReadLine();
+
+                if (input == "0.5")
+                {
+                    recipe.ScaleRecipe(0.5m);
+                    recipe.PrintRecipe();
+                }
+                else if (input == "2")
+                {
+                    recipe.ScaleRecipe(2m);
+                    recipe.PrintRecipe();
+                }
+                else if (input == "3")
+                {
+                    recipe.ScaleRecipe(3m);
+                    recipe.PrintRecipe();
+                }
+                else if (input == "reset")
+                {
+                    recipe.ResetQuantities();
+                    recipe.PrintRecipe();
+                }
+            }
     }
 }
