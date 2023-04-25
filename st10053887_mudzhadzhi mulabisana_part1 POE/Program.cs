@@ -10,6 +10,15 @@ namespace st10053887_mudzhadzhi_mulabisana_part1_POE
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter recipe details:");
+
+            Console.Write("Number of ingredients: ");
+            int numIngredients = int.Parse(Console.ReadLine());
+
+            Console.Write("Number of steps: ");
+            int numSteps = int.Parse(Console.ReadLine());
+
+            Recipe recipe = new Recipe(numIngredients, numSteps);
         }
     }
 }
